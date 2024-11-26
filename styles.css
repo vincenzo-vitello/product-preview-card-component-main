@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(32, 35%, 89%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-gray-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 27%, 94%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+main {
+  padding: 20px;
+}
+.img-desktop {
+  display: none;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+.img-mobile {
+  max-inline-size: 100%;
+  block-size: auto;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 20px;
+}
+#content {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+#product-type {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: var(--dark-gray-blue);
+}
+#product-name {
+  font-family: "Fraunces", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+#product-description {
+  color: var(--dark-gray-blue);
+  line-height: 2rem;
+  max-width: 80%;
+}
+#pricing {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+#price {
+  font-family: "Fraunces", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--dark-cyan);
+}
+#old-price {
+  text-decoration: line-through;
+  color: var(--dark-gray-blue);
+}
+#add-to-cart {
+  padding: 20px 0;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+}
+@media (min-width: 1000px) {
+  body {
+    background-color: var(--cream);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .img-mobile {
+    display: none;
+  }
+  .img-desktop {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+  }
+  main {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--white);
+    max-width: 60vw;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  #content {
+    padding: 30px;
+  }
+  #product-name {
+    font-size: 3rem;
+  }
+}
