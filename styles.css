@@ -25,11 +25,17 @@ main {
   max-width: 680px;
   margin: auto;
   margin-bottom: -2%;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
 }
 .img-mobile {
   max-inline-size: 100%;
   block-size: auto;
-  border-radius: 20px 20px 0 0;
+  transition-duration: 1s;
+}
+.img-mobile:hover {
+  transform: scale(1.2);
+  transition-duration: 1s;
 }
 .img-desktop {
   display: none;
@@ -92,6 +98,9 @@ main {
   border-radius: 0.8rem;
   font-weight: 700;
   fill: var(--white);
+  transition-duration: 0.5s;
+  outline: 2px solid var(--dark-cyan);
+  outline-offset: -2px;
 }
 
 #add-btn:hover {
@@ -101,6 +110,7 @@ main {
   color: var(--dark-cyan);
   cursor: pointer;
   fill: var(--dark-cyan);
+  transition-duration: 0.3s;
 }
 footer {
   text-align: center;
@@ -112,10 +122,18 @@ footer {
   }
   .img-desktop {
     display: block;
+    min-height: 80vh;
+    object-fit: cover;
+    transition-duration: 0.5s;
+  }
+  .img-desktop:hover {
+    transform: scale(1.2);
+    transition-duration: 1s;
   }
   main {
     display: flex;
     width: 80%;
+    max-width: 50vw;
     max-height: 80vh;
     margin: 50px auto;
     border-radius: 20px;
@@ -124,6 +142,7 @@ footer {
   #img-container {
     margin-bottom: 0;
     width: 60%;
+    overflow: hidden;
   }
   #content {
     all: unset;
@@ -134,5 +153,15 @@ footer {
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
+  }
+}
+@media (min-width: 1440px) {
+  #content {
+    gap: 4.5rem;
+  }
+  #product-description {
+    line-height: 2rem;
+    font-size: 1.5rem;
+    width: auto;
   }
 }
